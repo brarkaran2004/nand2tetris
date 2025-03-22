@@ -13,7 +13,7 @@ CHIP CPU {
         pc[15];          // address of next instruction
 
     PARTS:
-        //reverse of MSB
+        //inverse of MSB
         Not(in=instruction[15] , out=not15 );
         //And to check if its a C ins with writing A reg (5th bit)
         And(a=instruction[15] , b=instruction[5] , out=andout );
